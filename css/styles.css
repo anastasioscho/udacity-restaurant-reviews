@@ -289,7 +289,8 @@ nav h1 a {
 }
 
 #restaurant-img {
-  width: 90%;
+  width: 100%;
+  object-fit: cover;
 }
 
 #restaurant-address {
@@ -298,8 +299,8 @@ nav h1 a {
 }
 
 #restaurant-cuisine {
-  background-color: #333;
-  color: #ddd;
+  background-color: rgb(51, 51, 51);
+  color: white;
   font-size: 12pt;
   font-weight: 300;
   letter-spacing: 10px;
@@ -307,16 +308,15 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-  width: 90%;
 }
 
 #restaurant-container,
 #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
 }
 
+#restaurant-container,
 #reviews-container {
   padding: 30px 40px 80px;
 }
@@ -385,6 +385,13 @@ nav h1 a {
   text-transform: uppercase;
 }
 
+#restaurant-hours {
+  width: 100%;
+}
+
 #restaurant-hours td {
   color: #666;
+  font-size: 0.9rem;
+  color: rgb(110, 110, 110);
+  line-height: 1.7;
 }
