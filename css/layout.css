@@ -28,7 +28,7 @@
     }
 
     #restaurant-details-container {
-        grid-template-columns: repeat(auto-fit, 1fr);
+        grid-template-columns: repeat(2, 50%);
         grid-template-areas: 
             "map-container map-container"
             "reviews-container restaurant-container";
