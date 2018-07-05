@@ -3,8 +3,34 @@
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
+#restaurant-details-container {
+    display: grid;
+}
+
 @media (min-width: 576px) {
     #restaurants-list {
         padding: 30px 15px 30px;
+    }
+}
+
+@media (min-width: 768px)
+{
+    .inside #map-container {
+        grid-area: map-container;
+    }
+
+    #restaurant-container {
+        grid-area: restaurant-container;
+    }
+
+    #reviews-container {
+        grid-area: reviews-container;
+    }
+
+    #restaurant-details-container {
+        grid-template-columns: repeat(auto-fit, 1fr);
+        grid-template-areas: 
+            "map-container map-container"
+            "reviews-container restaurant-container";
     }
 }
