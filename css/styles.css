@@ -181,19 +181,27 @@ nav h1 a {
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
-  padding: 30px 15px 60px;
+  padding: 30px 15px 30px;
   text-align: center;
 }
 
 #restaurants-list li {
-  background-color: #fff;
-  border: 2px solid #ccc;
+  display: flex;
+  flex-direction: column;
   font-family: Arial, sans-serif;
   margin: 15px;
   min-height: 380px;
-  padding: 0 30px 25px;
   text-align: left;
-  width: 270px;
+  max-width: 100%;
+  border-radius: 40px 0 40px 0;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+
+}
+
+#restaurants-list li .restaurant-info {
+  padding: 0 30px 25px;
+  background-color: #fff;
+  border-radius: 0 0 40px 0;
 }
 
 #restaurants-list .restaurant-img {
@@ -203,6 +211,7 @@ nav h1 a {
   max-width: 100%;
   min-height: 248px;
   min-width: 100%;
+  border-radius: 40px 0 0 0;
 }
 
 #restaurants-list li h1 {
