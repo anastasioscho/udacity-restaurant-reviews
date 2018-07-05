@@ -11,10 +11,23 @@
     #restaurants-list {
         padding: 30px 15px 30px;
     }
+
+    #reviews-list li .name-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #reviews-list li .name-wrapper p:last-of-type {
+        align-self: center;
+    }
+
+    #restaurant-container,
+    #reviews-container {
+        padding: 20px 40px;
+    }
 }
 
-@media (min-width: 768px)
-{
+@media (min-width: 768px) {
     .inside #map-container {
         grid-area: map-container;
     }
@@ -29,7 +42,7 @@
 
     #restaurant-details-container {
         grid-template-columns: repeat(2, 50%);
-        grid-template-areas: 
+        grid-template-areas:
             "map-container map-container"
             "reviews-container restaurant-container";
     }
