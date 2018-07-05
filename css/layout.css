@@ -1,0 +1,10 @@
+#restaurants-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+@media (min-width: 576px) {
+    #restaurants-list {
+        padding: 30px 15px 30px;
+    }
+}
