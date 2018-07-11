@@ -3,7 +3,7 @@
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 
-#restaurant-details-container {
+.inside main {
     display: grid;
 }
 
@@ -12,12 +12,12 @@
         padding: 30px 15px 30px;
     }
 
-    #reviews-list li .name-wrapper {
+    #reviews-list li article .name-wrapper {
         flex-direction: row;
         justify-content: space-between;
     }
 
-    #reviews-list li .name-wrapper p:last-of-type {
+    #reviews-list li article .name-wrapper p:last-of-type {
         align-self: center;
     }
 
@@ -40,7 +40,7 @@
         grid-area: reviews-container;
     }
 
-    #restaurant-details-container {
+    .inside main {
         grid-template-columns: repeat(2, 50%);
         grid-template-areas:
             "map-container map-container"
