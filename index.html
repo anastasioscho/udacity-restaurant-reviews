@@ -13,20 +13,20 @@
 </head>
 
 <body>
-  <header>
-    <nav>
+  <header role="banner">
+    <nav role="navigation">
       <h1>
         <a href="/">Restaurant Reviews</a>
       </h1>
     </nav>
   </header>
 
-  <main>
+  <main role="main">
     <section id="map-container">
       <div id="map"></div>
     </section>
 
-    <section id="filters-container">
+    <section id="filters-container" role="form">
       <h2>Filter Results</h2>
       <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
         <option value="all">All Neighborhoods</option>
@@ -41,7 +41,7 @@
     </section>
   </main>
 
-  <footer id="footer">
+  <footer id="footer" role="contentinfo">
     Copyright (c) 2017
     <a href="/">
       <strong>Restaurant Reviews</strong>

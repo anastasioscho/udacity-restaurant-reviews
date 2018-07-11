@@ -159,6 +159,7 @@ createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
 
   const articleElement = document.createElement('article');
+  articleElement.setAttribute('role', 'article');
   li.append(articleElement);
 
   const image = document.createElement('img');

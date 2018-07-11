@@ -151,6 +151,7 @@ createReviewHTML = (review) => {
   const li = document.createElement('li');
 
   const articleElement = document.createElement('article');
+  articleElement.setAttribute('role', 'article');
   li.appendChild(articleElement);
 
   const nameWrapper = document.createElement('div');
