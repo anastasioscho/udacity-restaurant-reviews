@@ -6,6 +6,20 @@ const allowedURLOrigins = [
     'https://unpkg.com'
 ];
 
+self.addEventListener('install', function(event) {
+    event.waitUntil(
+        caches.open(cacheName).then(function(cache) {
+            return cache.addAll([
+                'css/styles.css',
+                'css/layout.css',
+                'js/dbhelper.js',
+                'js/main.js',
+                'js/restaurant_info.js'
+            ]);
+        })
+    );
+});
+
 self.addEventListener('fetch', function(event) {
     const requestURL = new URL(event.request.url);
     if (!allowedURLOrigins.includes(requestURL.origin)) return;
