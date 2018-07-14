@@ -6,6 +6,11 @@ var newMap;
  */
 document.addEventListener('DOMContentLoaded', (event) => {  
   initMap();
+
+  // Register the service worker
+
+  if (!navigator.serviceWorker) return;
+  navigator.serviceWorker.register('/sw.js');
 });
 
 /**

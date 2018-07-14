@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
   initMap(); // added 
   fetchNeighborhoods();
   fetchCuisines();
+
+  // Register the service worker
+
+  if (!navigator.serviceWorker) return;
+  navigator.serviceWorker.register('/sw.js');
 });
 
 /**
