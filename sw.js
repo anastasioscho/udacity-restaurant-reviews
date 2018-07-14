@@ -20,6 +20,20 @@ self.addEventListener('install', function(event) {
     );
 });
 
+self.addEventListener('activate', function(event) {
+    event.waitUntil(
+        caches.keys().then(function(otherCaches) {
+            return Promise.all(
+                otherCaches.filter(function(otherCache) {
+                    return otherCache.startsWith('urr-') && otherCache !== cacheName;
+                }).map(function(otherCache) {
+                    return caches.delete(otherCache);
+                })
+            );
+        })
+    );
+});
+
 self.addEventListener('fetch', function(event) {
     const requestURL = new URL(event.request.url);
     if (!allowedURLOrigins.includes(requestURL.origin)) return;
