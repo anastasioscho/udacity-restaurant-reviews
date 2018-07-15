@@ -234,7 +234,7 @@ nav h1 a {
   object-fit: cover;
 }
 
-#restaurants-list li article .restaurant-info h1 {
+#restaurants-list li article .restaurant-info h2 {
   color: #f18200;
   font-family: Arial, sans-serif;
   font-size: 14pt;
